@@ -26,8 +26,10 @@ format_network<-function(x){
 #produces a DFM of a twitter corpus
 topic_corpus<-function(x){
   f_7<-quanteda::corpus(x$text)
-  f_8<-dfm(f_7)
+  f_8<-quanteda::dfm(f_7)
 }
+
+kyle_dfm<-topic_corpus(kyle)
 
 #be sure to store the result
 some_storage_var<-topic_corpus(yourcorpus)
@@ -35,14 +37,15 @@ some_storage_var<-topic_corpus(yourcorpus)
 #load your dfm object as X, number of topics as Y, number of terms z
 #the result 
 topic_blast<-function(x, y, z){
-  internal_X <- dfm(x, remove = stopwords("english"))
-  internal_X2 <- dfm_trim(internal_X, min_termfreq = 4, max_docfreq = 10)
+  p_1<-quanteda::stopwords("english")
+  internal_X <- quanteda::dfm(kyle_dfm, remove = p_1)
+  internal_X2 <- quanteda::dfm_trim(internal_X, min_termfreq = 4, max_docfreq = 10)
   set.seed(100)
   if (require(topicmodels)) {
-    internal_X3 <- LDA(convert(internal_X2, to = "topicmodels"), k = y)
-    topic_terms<-get_terms(internal_X3, z)
+    internal_X3 <- topicmodels::LDA(quanteda::convert(internal_X2, to = "topicmodels"), k = y)
+    topic_terms<-topicmodels::get_terms(internal_X3, z)
   }
-  internal_X4<-topics(internal_X3)
+  internal_X4<-topicmodels::topics(internal_X3)
   internal_X5<-data.frame(internal_X4)
   internal_X6<-row.names(internal_X5)
   internal_X7<-stringr::str_replace_all(internal_X6, "text", "")
@@ -51,7 +54,7 @@ topic_blast<-function(x, y, z){
 }
 
 #example
-stuff<-topic_blast(corpusname, topics, terms)
+stuff<-topic_blast(kyle_dfm, 5, 5)
 
 
 
