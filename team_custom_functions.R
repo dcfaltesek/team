@@ -90,6 +90,27 @@ stuff<-topic_blast(WUDR_dfm, 5, 5)
 stuff$topic_terms
 stuff$topic_assignments
 
+#function to turn genius results into songs
+song_level_lyrics<-function(x){
+  Z<-unite(x, identifier, c(track_n, line))
+  Q<-spread(Z, identifier, lyric)
+  unite(Q, song_lyric, -c(track_title, album), na.rm=TRUE)
+}
+
+#this function works on artist corpuses extracted via the spotify API
+song_level_lyrics_spotify<-function(x){
+  Z<-unite(x, identifier, c(track_n, line))
+  ZZ<-select(Z, c(identifier, lyric, album_name, track_name))
+  Q<-spread(ZZ, identifier, lyric)
+  unite(Q, song_lyric, -c(track_name, album_name), na.rm=TRUE)
+}
+
+
+
+
+
+
+
 
 
 
