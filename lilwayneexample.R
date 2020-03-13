@@ -1,3 +1,5 @@
+#is this an email level problem
+
 #this will get us the data we need
 get_discography("Lil Wayne")
 
