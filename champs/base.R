@@ -14,7 +14,7 @@ library(ggplot2)
 
 #notice that I stored these in really nice names
 
-View(results)
+View(results) 
 View(teams)
 
 #first list of tasks to do..
@@ -39,8 +39,37 @@ View(clean_school)
 #This is a data frame with cleaned school names and the T-factor showing if they got in the tournament or not
 
 Usher<-bind_cols(data.frame(T_factor), data.frame(clean_school))
-
 View(Usher)
+
+bey<-bind_cols(Usher, teams)
+View(bey)
+
+colnames(bey)[2]<-"Schl" 
+
+jayz<-left_join(results, bey)
+
+
+
+#filter for that which is not blank
+drake<-jayz%>%
+  filter(GmNumber!="")
+
+dim(drake)
+dim(results)
+
+#now to make the ID column work again
+colnames(bey)[2]<-"Opp"
+
+bieber<-left_join(results, bey, by="Opp")
+dim(bieber)
+
+#so this should combine the two datasets
+rhi<-bind_cols(jayz, bieber)
+
+
+
+
+
 
 
 
