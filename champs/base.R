@@ -62,9 +62,19 @@ colnames(bey)[2]<-"Opp"
 
 bieber<-left_join(results, bey, by="Opp")
 dim(bieber)
+View(bieber)
+
 
 #so this should combine the two datasets
 rhi<-bind_cols(jayz, bieber)
+
+View(rhi)
+
+#select out what we actually need
+results%>%
+  select(Schl, Opp)
+
+
 
 
 
