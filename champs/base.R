@@ -23,8 +23,24 @@ View(teams)
 #3. structure the results so that the winning team is ALWAYS on the left and the loser is on the right
 #4. more advanced things to think about, how to we model each game, do we run a model on who wins and loses?
 
+#Simon here. This code creates T_factor which is a true/false list depending on if NCAA was in a schools name and cleans NCAA from the team names
 
+bb_T<-str_detect(`teams`$School, "NCAA")
+T_factor<-as.factor(bb_T)
 
+View(T_factor)
+
+#clean the touranemnt indicator from the names
+clean_school<-str_replace_all(`teams`$School, "NCAA", "")%>%
+  str_trim(side=c("both"))
+
+View(clean_school)
+
+#This is a data frame with cleaned school names and the T-factor showing if they got in the tournament or not
+
+Usher<-bind_cols(data.frame(T_factor), data.frame(clean_school))
+
+View(Usher)
 
 
 
