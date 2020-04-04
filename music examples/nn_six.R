@@ -17,7 +17,7 @@ RH<-get_discography("Red Hot Chili Peppers")
 LW<-get_discography("Lil Wayne")
 VP<-get_discography("Vulfpeck")
 KW<-get_discography("Kanye West")
-
+U<-get_discography("Usher")
 
 
 TS2<-unnest(TS, lyrics)
@@ -26,6 +26,7 @@ RH2<-unnest(RH, lyrics)
 LW2<-unnest(LW, lyrics)
 VP2<-unnest(VP, lyrics)
 KW2<-unnest(KW, lyrics)
+U2<-unnest(U, lyrics)
 
 
 TS3<-song_level_lyrics_spotify(TS2)%>%
@@ -46,13 +47,13 @@ VP3<-song_level_lyrics_spotify(VP2)%>%
 KW3<-song_level_lyrics_spotify(KW2)%>%
   mutate(name="Kanye West")
 
-
-U<-get_discography("Usher")
-U2<-unnest(U, lyrics)
 U3<-song_level_lyrics_spotify(U2)%>%
   mutate(name="Usher")
 
+#in this formulary, the foos are omited, you can sub in any six artists
 six_artists<-bind_rows(TS3, RH3, LW3, VP3, KW3, U3)
+
+#to load the usher example 
 
 six_id<-1:dim(six_artists)[1]
 
@@ -137,12 +138,12 @@ model <- keras_model_sequential() %>%
   layer_embedding(input_dim = vocab_size, output_dim = emd_size) %>%
   layer_global_average_pooling_1d() %>%
   layer_dense(units = 32, activation = "relu") %>%
-  layer_dense(units = 6, activation = "sigmoid")
+  layer_dense(units = 6, activation = "hard_sigmoid")
 
 summary(model)
 
 model %>% compile(
-  optimizer = 'adam',
+  optimizer = 'adagrad',
   loss = 'binary_crossentropy',
   metrics = 'accuracy'
 )
@@ -190,8 +191,13 @@ y_class<-inner_join(y_complete2, class_joiner)
 
 ggplot(y_class, aes(name,pred_names, colour=name))+geom_jitter()
 
-write.csv(six_ready, "data to run nn_six.csv", row.names=FALSE)
-
-View(six_wide)
 
 
+View(y_class)
+
+#evaluation routine
+res_eval2<-y_class%>%
+  filter(name != pred_names)
+
+dim(res_eval)[1]
+dim(res_eval2)[1]
