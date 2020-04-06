@@ -143,7 +143,7 @@ model <- keras_model_sequential() %>%
 summary(model)
 
 model %>% compile(
-  optimizer = 'adagrad',
+  optimizer = 'adam',
   loss = 'binary_crossentropy',
   metrics = 'accuracy'
 )
