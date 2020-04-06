@@ -57,8 +57,10 @@ six_artists<-bind_rows(TS3, RH3, LW3, VP3, KW3, U3)
 
 six_id<-1:dim(six_artists)[1]
 
-six_long<-data.frame(six_id, six_artists)
-View(four_long)
+#data for larger analysis
+big_six<-bind_rows(TS, RH, LW, VP, KW, U)
+selected_six<-big_six%>%
+  select(track_name, key_name, speechiness, acousticness, instrumentalness, liveness)
 
 six_wide<-six_long%>%
   pivot_wider(
@@ -76,7 +78,6 @@ f_w_d3[, 1:6] <- sapply(f_w_d3[, 1:6], as.numeric)
 A<-six_wide%>%
   select(1:4)
 
-six_ready<-data.frame(A, f_w_d3)
 
 library(rsample)
 data_split <- six_ready%>%

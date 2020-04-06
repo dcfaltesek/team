@@ -9,7 +9,7 @@ library(ggplot2)
 
 #so in the base directory I loaded a really old tournment
 #these should get the datasets from your local github source
-`results` <- read.csv("~/Documents/GitHub/team/champs/2011NCAA.csv", stringsAsFactors=FALSE)
+`results` <- read.csv("~/Documents/GitHub/team/champs/results_2.csv", stringsAsFactors=FALSE)
 `teams` <- read.csv("~/Documents/GitHub/team/champs/2011NCAATEAMS.csv", stringsAsFactors=FALSE)
 
 #notice that I stored these in really nice names
@@ -40,95 +40,78 @@ View(clean_school)
 
 Usher<-bind_cols(data.frame(T_factor), data.frame(clean_school))
 View(Usher)
-
 bey<-bind_cols(Usher, teams)
-View(bey)
+colnames(bey)[2]<-"Schl"
+solange<-bey
+colnames(solange)[2]<-"Opp"
+#bey is all the team data
 
-colnames(bey)[2]<-"Schl" 
+#what do we see
+anti_join(results, bey)
+anti_join(results, solange)
 
-jayz<-left_join(results, bey)
-
-
-
-#filter for that which is not blank
-drake<-jayz%>%
-  filter(GmNumber!="")
-
-dim(drake)
-dim(results)
-
-#now to make the ID column work again
-colnames(bey)[2]<-"Opp"
-
-bieber<-left_join(results, bey, by="Opp")
-dim(bieber)
-View(bieber)
+results$Schl
+results$Opp
 
 
-#so this should combine the two datasets
-rhi<-bind_cols(jayz, bieber)
+yachty<-inner_join(results, solange)
+wayne<-inner_join(results, bey)
 
-View(rhi)
+wayne2<-wayne%>%
+  select(c(Schl, X, Result, Rk, SOS, TOV_pct, FT.FGA, OP_3PAr))
 
-#select out what we actually need
-results%>%
-  select(Schl, Opp)
+yachty2<-yachty%>%
+  select(c(Opp, X, Result, Rk, SOS, TOV_pct, FT.FGA, OP_3PAr))
 
+fugees<-full_join(wayne2, yachty2, by="X")
 
-#Simon here, I wrote some code to get winners and losers sorted. I don't know if I did it correctly, but I put it below
+fugees<-fugees%>%
+  filter(Rk.x != "NA")%>%
+  filter(Rk.y != "NA")
 
+colnames(fugees)[3]<-"result"
 
-#Determine if the team in the Schl column won or lost
+bb_D<-data.frame(fugees$X, binary_result=as.factor(str_detect(fugees$Result, "W")))
+neptunes<-bind_cols(fugees, bb_D)
 
-bb_D<-str_detect(rhi$Result., "W")
-D_factor<-as.factor(bb_D)
+data_split <- neptunes %>%
+  initial_split(prop = .5)
 
-#Make column a data frame
-
-D.frame <- as.data.frame(D_factor)
-
-View(D.frame)
-
-#create a shared column between the true/false data frame and rhi
-
-D.frame2 <- cbind(D.frame, "GmNumber"=1:nrow(D.frame)) 
-
-View(D.frame2)
-
-rhi3<-rhi
-
-View(rhi3)
-
-#bind the data frames by the reference column 
-
-WonGames <-bind_cols(data.frame(D.frame2), data.frame(rhi3))
-
-View(WonGames)
-
-#Swapping Schl and Opp column data if the team on the right won, so all winners are on the left and all losers are on the right
-
-TransGames <- transform(WonGames, Schl = ifelse(D_factor == 'FALSE', Opp, Schl), Opp = ifelse(D_factor == 'FALSE', Schl, Opp))
-
-View(TransGames)
-
-#select out school, opp, T_factor, and D_factor
-
-Results <- select(TransGames, Schl, Opp, D_factor, T_factor)
-
-View(Results)
-
-#This gives a data frame with winners, losers, and if the winner was the expected team to win
-
-colnames(Results)[1]<-"Winner" 
-colnames(Results)[2]<-"Loser"
-colnames(Results)[3]<-"Winner Expected"
+#assign the split data to two categories
+training_data <- training(data_split)
+validation_data <- testing(data_split)
 
 
+library(textrecipes)
+rec <- recipe(binary_result ~ TOV_pct.x + TOV_pct.y + FT.FGA.x + FT.FGA.y + Rk.x + Rk.y, data = training_data) %>%
+  #three deep ngrams
+  prep() 
+
+train_data <- juice(rec)
+val_data <- bake(rec, new_data = validation_data)
+test_data <- bake(rec, new_data = training_data)
+
+#randomforest is called from parsnip
+library(parsnip)
+#accuracy is from forecast
+library(forecast)
+Combi2<-rand_forest("classification") %>%
+  set_engine("randomForest") %>%
+  fit(binary_result ~ ., data = train_data) %>%
+  predict(new_data = val_data) %>%
+  mutate(truth = val_data$binary_result)
+
+ggplot(Combi2, aes(.pred_class, truth))+geom_jitter()
 
 
+Combi3<-rand_forest("classification") %>%
+  set_engine("randomForest") %>%
+  fit(binary_result ~ ., data = train_data) %>%
+  predict(new_data = neptunes) %>%
+  mutate(truth = neptunes$binary_result)
 
+ggplot(Combi3, aes(.pred_class, truth))+geom_jitter()
 
-
-
-
+plurnt<-bind_cols(Combi3, neptunes)
+View(plurnt)
 
