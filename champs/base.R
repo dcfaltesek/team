@@ -57,6 +57,7 @@ results$Opp
 yachty<-inner_join(results, solange)
 wayne<-inner_join(results, bey)
 
+#find some sample of different stats like "four factors" 
 wayne2<-wayne%>%
   select(c(Schl, X, Result, Rk, SOS, TOV_pct, FT.FGA, OP_3PAr))
 
@@ -83,7 +84,7 @@ validation_data <- testing(data_split)
 
 
 library(textrecipes)
-rec <- recipe(binary_result ~ TOV_pct.x + TOV_pct.y + FT.FGA.x + FT.FGA.y + Rk.x + Rk.y, data = training_data) %>%
+rec <- recipe(binary_result ~ Rk.x + Rk.y + SOS.x + SOS.y + TOV_pct.x + TOV_pct.y + FT.FGA.x + FT.FGA.y, data = training_data) %>%
   #three deep ngrams
   prep() 
 

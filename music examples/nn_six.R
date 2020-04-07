@@ -52,6 +52,7 @@ U3<-song_level_lyrics_spotify(U2)%>%
 
 #in this formulary, the foos are omited, you can sub in any six artists
 six_artists<-bind_rows(TS3, RH3, LW3, VP3, KW3, U3)
+six_long<-withusher
 
 #to load the usher example 
 
@@ -59,14 +60,15 @@ six_id<-1:dim(six_artists)[1]
 
 #data for larger analysis
 big_six<-bind_rows(TS, RH, LW, VP, KW, U)
-selected_six<-big_six%>%
-  select(track_name, key_name, speechiness, acousticness, instrumentalness, liveness)
+
+six_long<-data.frame(six_id, six_artists)
+
 
 six_wide<-six_long%>%
   pivot_wider(
     names_from = c(name),
     #these become a UNIQUE KEY COMBINATION NAME AND DATE
-    values_from = -c(six_id, album_name, track_name, song_lyric),)
+    values_from = -c(six_id, album_name, track_name, song_lyric))
 
 six_wide_detect<-six_wide%>%
   select(5:10)
@@ -78,6 +80,7 @@ f_w_d3[, 1:6] <- sapply(f_w_d3[, 1:6], as.numeric)
 A<-six_wide%>%
   select(1:4)
 
+six_ready<-data.frame(A, f_w_d3)
 
 library(rsample)
 data_split <- six_ready%>%
@@ -119,7 +122,7 @@ data_frame(song_length = song_length)%>%
 
 
 ## define max_len
-max_len = 1500
+max_len = 1000
 
 ## pad sequence
 x_train <- pad_sequences(training_seq, maxlen = max_len, padding = "post")
@@ -175,7 +178,7 @@ y_test <- add_column(y_test, six_id = six_ready$six_id, .before = 1)
 y_complete<-inner_join(y_test, six_long, by="six_id")
 View(y_complete)
 
-ggplot(y_complete, aes(Foo.Fighters,Chili.Peppers, colour=name))+geom_text_repel(aes(label=track_name))
+ggplot(y_complete, aes(Taylor.Swift,Usher, colour=name))+geom_text_repel(aes(label=track_name))
 
 
 #joiner
