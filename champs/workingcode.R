@@ -33,8 +33,26 @@ library(rsample)
 
 #START HERE!
 
-blackstreet2<-data.frame(blackstreet, outcome=as.factor(blackstreet$outcome))
-data_split <- blackstreet2 %>%
+#here is making the columns numeric
+#all the x are for team 1 all the y are team 2
+#all the .. rates rather than values
+blackstreet2<-data.frame(new_labels_for_columns = as.numeric(blackstreet$FT..x), 
+                         pointsx = as.numeric(blackstreet$FT..y), 
+                         goalsx = as.numeric(blackstreet$FG..x), 
+                         goalsy = as.numeric(blackstreet$FG..y), 
+                         outcome=as.factor(blackstreet$outcome),
+                         more,
+                         more,
+                         more)
+
+
+
+blackstreet3<-blackstreet2%>%
+  filter(FT.x != "NA")%>%
+  filter(FT.y != "NA")
+
+
+data_split <- blackstreet3 %>%
   initial_split(prop = .8)
 
 #assign the split data to two categories
@@ -43,7 +61,7 @@ validation_data <- testing(data_split)
 
 
 library(textrecipes)
-rec <- recipe(outcome.1 ~ FT.x + FT.y, data = training_data) %>%
+rec <- recipe(outcome.1 ~ pointsy + pointsx, data=training_data) %>%
   #three deep ngrams
   prep() 
 
