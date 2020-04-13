@@ -52,14 +52,12 @@ U3<-song_level_lyrics_spotify(U2)%>%
 
 #in this formulary, the foos are omited, you can sub in any six artists
 six_artists<-bind_rows(TS3, RH3, LW3, VP3, KW3, U3)
-six_long<-withusher
+six_artists<-withusher
 
 #to load the usher example 
 
 six_id<-1:dim(six_artists)[1]
 
-#data for larger analysis
-big_six<-bind_rows(TS, RH, LW, VP, KW, U)
 
 six_long<-data.frame(six_id, six_artists)
 
@@ -142,7 +140,7 @@ model <- keras_model_sequential() %>%
   layer_embedding(input_dim = vocab_size, output_dim = emd_size) %>%
   layer_global_average_pooling_1d() %>%
   layer_dense(units = 32, activation = "relu") %>%
-  layer_dense(units = 6, activation = "hard_sigmoid")
+  layer_dense(units = 6, activation = "sigmoid")
 
 summary(model)
 
@@ -155,7 +153,7 @@ model %>% compile(
 history <- model %>% 
   fit(x_train,
       y_train,
-      epochs = 500,
+      epochs = 1000,
       batch_size = 16,
       validation_split = 0.05,
       verbose = 0) 
@@ -194,8 +192,6 @@ y_complete2<-inner_join(y_test2, six_long, by="six_id")
 y_class<-inner_join(y_complete2, class_joiner)
 
 ggplot(y_class, aes(name,pred_names, colour=name))+geom_jitter()
-
-
 
 View(y_class)
 

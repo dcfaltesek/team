@@ -8,13 +8,13 @@ LW<-get_discography("Lil Wayne")
 #prepare the lyric data
 
 #notice that the lyrics are here are nested
-LW$lyrics
+
 
 #here are a few libraries that can do the job
 library(tidyr)
 library(dplyr)
 #tgo on ahead and unnest those
-LW2<-unnest(LW, lyrics)
+LW2<-unnest(LW, lyrics, album_images)
 
 
 #this function will be very nice 
@@ -25,20 +25,30 @@ song_level_lyrics_spotify<-function(x){
   unite(Q, song_lyric, -c(track_name, album_name), na.rm=TRUE)
 }
 
-#use that handy function
-LW3<-song_level_lyrics_spotify(LW2)
+TSX<-spotify_other_information(TS)
+RHX<-spotify_other_information(RH)
+LWX<-spotify_other_information(LW)
+VPX<-spotify_other_information(VP)
+KWX<-spotify_other_information(KW)
+UX<-spotify_other_information(U)
+
+staind<-bind_rows(TSX, RHX, LWX, VPX, KWX, UX)
+flurn<-inner_join(withusher, staind)
+
+
+View()
 
 #now that we have our full lyrics, lets break this up for sampling
 library(rsample)
-data_split <- LW3 %>%
-  initial_split(prop = .8, strata = album_name)
+data_split <- flurn %>%
+  initial_split(prop = .5, strata = album_name)
 
 #assign the split data to two categories
 training_data <- training(data_split)
 validation_data <- testing(data_split)
 
 library(textrecipes)
-rec <- recipe(album_name ~ song_lyric, data = training_data) %>%
+rec <- recipe(name ~ song_lyric + tempo + key+ speechiness + liveness, data = training_data) %>%
   #three deep ngrams
   step_tokenize(song_lyric, token = "ngrams", options = list(n = 2)) %>%
   #max tokens 250
@@ -46,12 +56,13 @@ rec <- recipe(album_name ~ song_lyric, data = training_data) %>%
   #tfidf method
   #here is the key to actually locking on
   step_tfidf(song_lyric) %>%
-  step_upsample(album_name) %>%
+  step_upsample(name) %>%
   prep() 
 
 train_data <- juice(rec)
 val_data <- bake(rec, new_data = validation_data)
 test_data <- bake(rec, new_data = training_data)
+oasis_data<-bake(rec, new_data=flurn)
 
 #randomforest is called from parsnip
 library(parsnip)
@@ -59,13 +70,14 @@ library(parsnip)
 library(forecast)
 is4<-rand_forest("classification") %>%
   set_engine("randomForest") %>%
-  fit(album_name ~ ., data = train_data) %>%
-  
-  predict(new_data = val_data) %>%
-  mutate(truth = val_data$album_name)
+  fit(name ~ ., data = train_data) %>%
+  predict(new_data = oasis_data) %>%
+  mutate(truth = flurn$name)
 
 library(ggplot2)
-ggplot(is4, aes(truth, .pred_class))+geom_jitter()+theme_classic()+theme(axis.text.x = element_text(angle = 45))
+ggplot(is4, aes(truth, .pred_class, colour=truth))+geom_jitter()+theme_classic()+theme(axis.text.x = element_text(angle = 45, hjust=1))+
+  ggtitle("Random Forest with TF/IDF, Key, Tempo, Speechiness, and Liveness")+labs(x="Artist", y="Predicted Artist", key="Artist")
+
 
 
 #this will get us the data we need
