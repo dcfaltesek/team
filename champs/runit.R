@@ -12,8 +12,8 @@ fugees<-blackstreet_fixed%>%
   mutate(scorebalance=T1Z-T2Z)
 
  
-firstround<-InputData...Round.of.64
-predict20A<-firstround%>%
+secondround<-final
+predict20B<-secondround%>%
   mutate(T1FGA = T1FreeThrowAttpt/T1FieldGoalAttpt*T1FreeThrowPct)%>%
   mutate(T2FGA = T2FreeThrowAttpt/T2FieldGoalAttpt*T2FreeThrowPct)%>%
   mutate(T1R3G = T1FieldGoalAttpt3P/T1FieldGoalAttpt2P*T1FieldGoals3PPct)%>%
@@ -85,12 +85,12 @@ ggplot(firstround, aes(T2GamesPlayed,T2PointsScored))+geom_text_repel(aes(label=
 write.csv(NSYNC, "NSYNC.csv", row.names = FALSE)
 
 #this code makes new predictions
-one_off<-bake(rec,new_data = predict20A)
+one_off<-bake(rec,new_data = predict20B)
 
 Combi3<-rand_forest("classification", trees=10000) %>%
   set_engine("randomForest") %>%
   fit(outcome ~ ., data = train_data) %>%
   predict(new_data = one_off)
 
-X<-data.frame(Combi3, predict20A)
+X<-data.frame(Combi3, predict20B)
 View(X)
