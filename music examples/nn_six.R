@@ -52,35 +52,37 @@ U3<-song_level_lyrics_spotify(U2)%>%
 
 #in this formulary, the foos are omited, you can sub in any six artists
 six_artists<-bind_rows(TS3, RH3, LW3, VP3, KW3, U3)
-six_artists<-withusher
 
-#to load the usher example 
-
+#creates an ID vector for the dataset that is equalvaent to a vector from 1:the length of the dataset
 six_id<-1:dim(six_artists)[1]
 
-
+#attach those two datasets.
 six_long<-data.frame(six_id, six_artists)
 
-
+#now that dataset gets pivoted 
 six_wide<-six_long%>%
   pivot_wider(
     names_from = c(name),
-    #these become a UNIQUE KEY COMBINATION NAME AND DATE
+    #the dataset does not include the id var, the album name, track, or lyric, thus we get six new columns
+    #next to the columns where we have our critical song level metadata
     values_from = -c(six_id, album_name, track_name, song_lyric))
 
+#cleave off the side which indicates artist
 six_wide_detect<-six_wide%>%
   select(5:10)
-
+#replace the blanks
 f_w_d2<-replace(six_wide_detect, is.na(six_wide_detect), 0)
 f_w_d3<-replace(f_w_d2, f_w_d2 !=0, 1)
 f_w_d3[, 1:6] <- sapply(f_w_d3[, 1:6], as.numeric)
-
+#NON detected columns from the orignal dataset
 A<-six_wide%>%
   select(1:4)
 
+#put it all back together
 six_ready<-data.frame(A, f_w_d3)
 
 library(rsample)
+#This is a 50/50 split method
 data_split <- six_ready%>%
   initial_split(prop = .5)
 
@@ -92,10 +94,12 @@ validation_data <- testing(data_split)
 ## define vocab size (this is parameter to play with)
 vocab_size = 50000
 
+#the tokenizer step converts each word into a unique number, these numbers then are added to an arry which makes almost anything possible
 tokenizer <- text_tokenizer(num_words = vocab_size) %>% 
   fit_text_tokenizer(training_data$song_lyric)
 
 library(keras)
+#we need to implement the method on each selection of vectors
 training_seq <- texts_to_sequences(tokenizer, training_data$song_lyric)
 valid_seq <- texts_to_sequences(tokenizer, validation_data$song_lyric)
 all_seq<-texts_to_sequences(tokenizer, six_ready$song_lyric)
@@ -153,8 +157,8 @@ model %>% compile(
 history <- model %>% 
   fit(x_train,
       y_train,
-      epochs = 1000,
-      batch_size = 16,
+      epochs = 20,
+      batch_size = 5,
       validation_split = 0.05,
       verbose = 0) 
 
@@ -166,7 +170,6 @@ plot(history)+
 #now for the fun part
 predicted_prob <- predict_proba(model, x_all) 
 predicted_classes <- predict_classes(model, x_all) 
-View(predicted_classes)
 
 
 ## join ids and predictions
@@ -174,8 +177,9 @@ y_test <- as_data_frame(predicted_prob)
 names(y_test) <- names(training_data)[5:10] ## labels names
 y_test <- add_column(y_test, six_id = six_ready$six_id, .before = 1) 
 y_complete<-inner_join(y_test, six_long, by="six_id")
-View(y_complete)
 
+
+#takes a while to render
 ggplot(y_complete, aes(Taylor.Swift,Usher, colour=name))+geom_text_repel(aes(label=track_name))
 
 
@@ -196,8 +200,8 @@ ggplot(y_class, aes(name,pred_names, colour=name))+geom_jitter()
 View(y_class)
 
 #evaluation routine
-res_eval2<-y_class%>%
-  filter(name != pred_names)
+res_eval1<-y_class%>%
+  filter(name == pred_names)
 
-dim(res_eval)[1]
+dim(res_eval1)[1]
 dim(res_eval2)[1]

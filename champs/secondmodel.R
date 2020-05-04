@@ -2,6 +2,8 @@
 library(dplyr)
 #filter blackstreet to get the last three years where games were played
 
+
+
 #davekoz is the last three years
 davekoz<-nodoubt%>%
   filter(Year.x > 16)
@@ -72,7 +74,8 @@ write.csv(coreset, "coreset.csv", row.names = FALSE)
 
 #ADD LAYER of data for current year
 colnames(teamdata20)[2]<-"team1"
-saxpack<-inner_join(round1, teamdata20, by="team1")
+#UPDATE THIS LINE
+saxpack<-inner_join(round2, teamdata20, by="team1")
 colnames(saxpack)[1]<-"placeholder"
 colnames(saxpack)[2]<-"team1"
 boneyjames<-inner_join(saxpack, teamdata20, by="team1")
