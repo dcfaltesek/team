@@ -144,7 +144,7 @@ model <- keras_model_sequential() %>%
   layer_embedding(input_dim = vocab_size, output_dim = emd_size) %>%
   layer_global_average_pooling_1d() %>%
   layer_dense(units = 32, activation = "relu") %>%
-  layer_dense(units = 6, activation = "sigmoid")
+  layer_dense(units = 6, activation = "hard_sigmoid")
 
 summary(model)
 
@@ -157,8 +157,8 @@ model %>% compile(
 history <- model %>% 
   fit(x_train,
       y_train,
-      epochs = 20,
-      batch_size = 5,
+      epochs = 10000,
+      batch_size = 16,
       validation_split = 0.05,
       verbose = 0) 
 
@@ -180,7 +180,7 @@ y_complete<-inner_join(y_test, six_long, by="six_id")
 
 
 #takes a while to render
-ggplot(y_complete, aes(Taylor.Swift,Usher, colour=name))+geom_text_repel(aes(label=track_name))
+#ggplot(y_complete, aes(Taylor.Swift,Usher, colour=name))+geom_text_repel(aes(label=track_name))
 
 
 #joiner
@@ -204,4 +204,8 @@ res_eval1<-y_class%>%
   filter(name == pred_names)
 
 dim(res_eval1)[1]
+
+res_eval2<-y_class%>%
+  filter(name != pred_names)
+
 dim(res_eval2)[1]
