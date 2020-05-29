@@ -1,0 +1,828 @@
+word,president,score,occassion
+economy,obama,3,SOTU
+polan,obama,2,SOTU
+health,obama,2,SOTU
+education,obama,2,SOTU
+energy,obama,2,SOTU
+budget,obama,1,SOTU
+tonight,obama,1,SOTU
+cost,obama,-1,SOTU
+recovery,obama,2,SOTU
+reform,obama,-1,SOTU
+tax,obama,-1,SOTU
+navy,obama,3,naval
+naval,obama,3,naval
+sailors,obama,3,naval
+academy,obama,3,naval
+commander,obama,2,naval
+midshipmen,obama,3,naval
+don't,obama,-2,SOTU
+college,obama,2,SOTU
+banks,obama,-2,SOTU
+even,obama,-1,SOTU
+children,obama,3,SOTU
+deficit,obama,-2,SOTU
+put,obama,-1,SOTU
+afford,obama,-1,SOTU
+cannot,obama,-1,SOTU
+lending,obama,-3,SOTU
+million,obama,-1,SOTU
+again,obama,-1,SOTU
+confidence,obama,-1,SOTU
+high,obama,-1,SOTU
+credit,obama,-3,SOTU
+debt,obama,-3,SOTU
+financial,obama,-3,SOTU
+recession,obama,-5,SOTU
+and we will,obama,5,General Expression
+the cost of,obama,-3,General Expression
+Newtown,obama,2,Sandy Hook
+comfort,obama,5,Sandy Hook
+such,obama,-3,Sandy Hook
+despite,obama,3,Election Victory 2012
+fourth,obama,-2,Sandy Hook
+victims,obama,-4,Sandy Hook
+whatever,obama,1,Sandy Hook
+energy,obama,2,SOTU 2012
+daughter,obama,2,Election Victory 2012
+ourselves,obama,1,Sandy Hook
+violence,obama,-5,Sandy Hook
+acts,obama,2,Sandy Hook
+apart,obama,-3,Sandy Hook
+bear,obama,1,Sandy Hook
+evil,obama,-5,Sandy Hook
+grief,obama,-5,Sandy Hook
+harm,obama,-5,Sandy Hook
+joy,obama,5,Sandy Hook
+matters,obama,2,Sandy Hook
+measure,obama,1,Sandy Hook
+realize,obama,2,Sandy Hook
+responders,obama,1,Sandy Hook
+saying,obama,2,Sandy Hook
+shock,obama,-4,Sandy Hook
+society,obama,-1,Sandy Hook
+torn,obama,-3,Sandy Hook
+tragedies,obama,-5,Sandy Hook
+truly,obama,-1,Sandy Hook
+visited,obama,-2,Sandy Hook
+about,obama,2,Election Victory 2012
+choose,obama,2,Nominee Acceptance 2012
+path,obama,1,Nominee Acceptance 2012
+al qaida,obama,-5,Usama Bin Laden (2011)
+bin laden,obama,-5,Usama Bin Laden (2011)
+operation,obama,2,Usama Bin Laden (2011)
+pakistan,obama,1,Usama Bin Laden (2011)
+capture,obama,-2,Usama Bin Laden (2011)
+compound,obama,-2,Usama Bin Laden (2011)
+attacks,obama,-5,Usama Bin Laden (2011)
+allies,obama,5,Usama Bin Laden (2011)
+friends,obama,5,Usama Bin Laden (2011)
+committed,obama,-3,Usama Bin Laden (2011)
+courage,obama,4,Usama Bin Laden (2011)
+declared,obama,-2,Usama Bin Laden (2011)
+hiding,obama,-1,Usama Bin Laden (2011)
+killing,obama,-3,Usama Bin Laden (2011)
+plot,obama,-4,Usama Bin Laden (2011)
+counterterrosim,obama,2,Usama Bin Laden (2011)
+war,obama,-5,Usama Bin Laden (2011)
+wounded,obama,-2,Usama Bin Laden (2011)
+terrorist,obama,-5,Usama Bin Laden (2011)
+attack,obama,-5,Usama Bin Laden (2011)
+effort,obama,2,Usama Bin Laden (2011)
+intelligence,obama,2,Usama Bin Laden (2011)
+killed,obama,-1,Usama Bin Laden (2011)
+loved,obama,5,Usama Bin Laden (2011)
+team,obama,3,Usama Bin Laden (2011)
+justice,obama,4,Usama Bin Laden (2011)
+achivement,obama,3,Usama Bin Laden (2011)
+death,obama,-1,Usama Bin Laden (2011)
+defense,obama,1,Usama Bin Laden (2011)
+heroic,obama,5,Usama Bin Laden (2011)
+protect,obama,4,Usama Bin Laden (2011)
+values,obama,1,Usama Bin Laden (2011)
+achive,obama,3,Usama Bin Laden (2011)
+avoid,obama,-2,Usama Bin Laden (2011)
+blood,obama,-4,Usama Bin Laden (2011)
+casualities,obama,-5,Usama Bin Laden (2011)
+civilian,obama,2,Usama Bin Laden (2011)
+collapsing,obama,-3,Usama Bin Laden (2011)
+custody,obama,-1,Usama Bin Laden (2011)
+darkened,obama,-2,Usama Bin Laden (2011)
+destruction,obama,-3,Usama Bin Laden (2011)
+determination,obama,2,Usama Bin Laden (2011)
+disrupt,obama,-1,Usama Bin Laden (2011)
+embrace,obama,1,Usama Bin Laden (2011)
+examplify,obama,3,Usama Bin Laden (2011)
+extraordinary,obama,5,Usama Bin Laden (2011)
+forgotten,obama,-2,Usama Bin Laden (2011)
+gravely,obama,-2,Usama Bin Laden (2011)
+greatness,obama,3,Usama Bin Laden (2011)
+heartbreak,obama,-4,Usama Bin Laden (2011)
+hijacked,obama,-3,Usama Bin Laden (2011)
+historic,obama,1,Usama Bin Laden (2011)
+homeland,obama,3,Usama Bin Laden (2011)
+innocent,obama,1,Usama Bin Laden (2011)
+murder,obama,-5,Usama Bin Laden (2011)
+painstaking,obama,-1,Usama Bin Laden (2011)
+patriotism,obama,2,Usama Bin Laden (2011)
+prevailed,obama,3,Usama Bin Laden (2011)
+safer,obama,2,Usama Bin Laden (2011)
+satisfaction,obama,1,Usama Bin Laden (2011)
+servicemember,obama,2,Usama Bin Laden (2011)
+slaughter,obama,-4,Usama Bin Laden (2011)
+symbol,obama,1,Usama Bin Laden (2011)
+terror,obama,-3,Usama Bin Laden (2011)
+testament,obama,1,Usama Bin Laden (2011)
+threatened,obama,-2,Usama Bin Laden (2011)
+unity,obama,3,Usama Bin Laden (2011)
+unparalleled,obama,-2,Usama Bin Laden (2011)
+afghanistan,obama,1,Usama Bin Laden (2011)
+cooperation,obama,1,Usama Bin Laden (2011)
+dismantle,obama,1,Usama Bin Laden (2011)
+liberty,obama,2,Usama Bin Laden (2011)
+military,obama,1,Usama Bin Laden (2011)
+sacrfice,obama,1,Usama Bin Laden (2011)
+safe,obama,2,Usama Bin Laden (2011)
+securing,obama,1,Usama Bin Laden (2011)
+service,obama,2,Usama Bin Laden (2011)
+serve,obama,1,Usama Bin Laden (2011)
+strengthened,obama,1,Usama Bin Laden (2011)
+taliban,obama,-5,Usama Bin Laden (2011)
+terrorists,obama,-5,Usama Bin Laden (2011)
+vicious,obama,-3,Usama Bin Laden (2011)
+costs,obama,-1,Usama Bin Laden (2011)
+fight,obama,-1,Usama Bin Laden (2011)
+secruity,obama,1,Usama Bin Laden (2011)
+struggle,obama,-1,Usama Bin Laden (2011)
+dignity,obama,1,Usama Bin Laden (2011)
+prosperity,obama,4,Usama Bin Laden (2011)
+jobs,obama,5,State of the Union (2011)
+education,obama,5,State of the Union (2011)
+energy,obama,3,State of the Union (2011)
+innovation,obama,5,State of the Union (2011)
+success,obama,5,State of the Union (2011)
+goal,obama,2,State of the Union (2011)
+troops,obama,3,State of the Union (2011)
+business,obama,4,State of the Union (2011)
+spending,obama,-1,State of the Union (2011)
+deficit,obama,-3,State of the Union (2011)
+tax,obama,-4,State of the Union (2011)
+schools,obama,2,State of the Union (2011)
+desrve,obama,2,State of the Union (2011)
+nuclear,obama,-1,State of the Union (2011)
+leadership,obama,-1,State of the Union (2011)
+progress,obama,3,State of the Union (2011)
+dream,obama,4,State of the Union (2011)
+republicans,obama,1,State of the Union (2011)
+research,obama,2,State of the Union (2011)
+students,obama,1,State of the Union (2011)
+better,obama,3,State of the Union (2011)
+business,obama,2,State of the Union (2011)
+democrates,obama,1,State of the Union (2011)
+technology,obama,2,State of the Union (2011)
+win,obama,3,State of the Union (2011)
+created,obama,2,State of the Union (2011)
+recession,obama,-5,State of the Union (2011)
+changed,obama,-1,State of the Union (2011)
+economy,obama,1,State of the Union (2011)
+future,obama,2,State of the Union (2011)
+behind,obama,-2,State of the Union (2011)
+cuts,obama,-1,State of the Union (2011)
+reform,obama,1,State of the Union (2011)
+money,obama,-2,State of the Union (2011)
+responsibiltiy,obama,1,State of the Union (2011)
+domestic,obama,1,State of the Union (2011)
+enforce,obama,3,State of the Union (2011)
+exports,obama,2,State of the Union (2011)
+infastrucuture,obama,3,State of the Union (2011)
+greater,obama,2,State of the Union (2011)
+investment,obama,2,State of the Union (2011)
+fewer,obama,1,State of the Union (2011)
+iraq,obama,1,State of the Union (2011)
+market,obama,2,State of the Union (2011)
+policy,obama,1,State of the Union (2011)
+promise,obama,4,State of the Union (2011)
+rid,obama,1,State of the Union (2011)
+weapons,obama,-2,State of the Union (2011)
+industry,obama,1,State of the Union (2011)
+different,obama,1,State of the Union (2011)
+compete,obama,-1,State of the Union (2011)
+safe,obama,5,State of the Union (2011)
+science,obama,3,State of the Union (2011)
+best,obama,2,State of the Union (2011)
+congress,obama,1,State of the Union (2011)
+building,obama,1,State of the Union (2011)
+create,obama,1,State of the Union (2011)
+cut,obama,-1,State of the Union (2011)
+invest,obama,1,State of the Union (2011)
+projects,obama,2,State of the Union (2011)
+trade,obama,2,State of the Union (2011)
+alliances,obama,4,State of the Union (2011)
+battles,obama,-2,State of the Union (2011)
+bipartisan,obama,5,State of the Union (2011)
+breakthroughs,obama,4,State of the Union (2011)
+budget,obama,-1,State of the Union (2011)
+deal,obama,1,State of the Union (2011)
+destiny,obama,3,State of the Union (2011)
+educate,obama,4,State of the Union (2011)
+farmers,obama,1,State of the Union (2011)
+teachers,obama,1,State of the Union (2011)
+fought,obama,2,State of the Union (2011)
+freeze,obama,-1,State of the Union (2011)
+painful,obama,-2,State of the Union (2011)
+partnership,obama,2,State of the Union (2011)
+prepared,obama,1,State of the Union (2011)
+respect,obama,2,State of the Union (2011)
+rescue,obama,-1,State of the Union (2011)
+rival,obama,-1,State of the Union (2011)
+russia,obama,-1,State of the Union (2011)
+sanctions,obama,-3,State of the Union (2011)
+soviets,obama,-1,State of the Union (2011)
+stake,obama,-1,State of the Union (2011)
+study,obama,1,State of the Union (2011)
+undocumented,obama,1,State of the Union (2011)
+veto,obama,-1,State of the Union (2011)
+vote,obama,1,State of the Union (2011)
+aggreements,obama,2,State of the Union (2011)
+health,obama,2,State of the Union (2011)
+laughter,obama,2,State of the Union (2011)
+life,obama,5,State of the Union (2011)
+support,obama,1,State of the Union (2011)
+bad,obama,-1,State of the Union (2011)
+crisis,obama,-4,State of the Union (2011)
+defeat,obama,1,State of the Union (2011)
+eliminate,obama,1,State of the Union (2011)
+fix,obama,1,State of the Union (2011)
+violence,obama,-2,State of the Union (2011)
+abandon,obama,-1,State of the Union (2011)
+aspirations,obama,1,State of the Union (2011)
+assemble,obama,1,State of the Union (2011)
+assitance,obama,1,State of the Union (2011)
+brave,obama,3,State of the Union (2011)
+cancer,obama,-2,State of the Union (2011)
+celebrated,obama,2,State of the Union (2011)
+cheaper,obama,1,State of the Union (2011)
+combat,obama,-1,State of the Union (2011)
+confront,obama,-1,State of the Union (2011)
+consquential,obama,-2,State of the Union (2011)
+constitution,obama,3,State of the Union (2011)
+corrpution,obama,-5,State of the Union (2011)
+creativity,obama,4,State of the Union (2011)
+critical,obama,1,State of the Union (2011)
+crumbling,obama,-2,State of the Union (2011)
+decline,obama,-1,State of the Union (2011)
+deficits,obama,-2,State of the Union (2011)
+deportation,obama,-1,State of the Union (2011)
+deploy,obama,-1,State of the Union (2011)
+development,obama,1,State of the Union (2011)
+dictator,obama,-4,State of the Union (2011)
+diplomatic,obama,4,State of the Union (2011)
+discourage,obama,-2,State of the Union (2011)
+doubling,obama,2,State of the Union (2011)
+drugs,obama,-3,State of the Union (2011)
+encouraging,obama,1,State of the Union (2011)
+naysayers,obama,-2,State of the Union (2011)
+nonpartisian,obama,-2,State of the Union (2011)
+pride,obama,4,State of the Union (2011)
+problem,obama,-1,State of the Union (2011)
+prosperous,obama,5,State of the Union (2011)
+rebuild,obama,2,State of the Union (2011)
+rigged,obama,-1,State of the Union (2011)
+rumors,obama,-1,State of the Union (2011)
+grateful,obama,5,Arizona Shooting Memorial (2011)
+tragedy,obama,-5,Arizona Shooting Memorial (2011)
+better,obama,2,Arizona Shooting Memorial (2011)
+heroism,obama,4,Arizona Shooting Memorial (2011)
+disocurse,obama,-2,Arizona Shooting Memorial (2011)
+reflection,obama,1,Arizona Shooting Memorial (2011)
+survived,obama,2,Arizona Shooting Memorial (2011)
+sudden,obama,-1,Arizona Shooting Memorial (2011)
+eyes,obama,,Arizona Shooting Memorial (2011)
+friends,obama,1,Arizona Shooting Memorial (2011)
+process,obama,,Arizona Shooting Memorial (2011)
+remind,obama,-1,Arizona Shooting Memorial (2011)
+blame,obama,-1,Arizona Shooting Memorial (2011)
+chaos,obama,-3,Arizona Shooting Memorial (2011)
+conceron,obama,1,Arizona Shooting Memorial (2011)
+surviving,obama,1,Arizona Shooting Memorial (2011)
+died,obama,-2,Arizona Shooting Memorial (2011)
+evil,obama,-4,Arizona Shooting Memorial (2011)
+exercise,obama,1,Arizona Shooting Memorial (2011)
+gratitude,obama,2,Arizona Shooting Memorial (2011)
+imagine,obama,1,Arizona Shooting Memorial (2011)
+please,obama,-2,Arizona Shooting Memorial (2011)
+reflection,obama,-1,Arizona Shooting Memorial (2011)
+selflessness,obama,3,Arizona Shooting Memorial (2011)
+undoubatldly,obama,2,Arizona Shooting Memorial (2011)
+worthy,obama,2,Arizona Shooting Memorial (2011)
+wounds,obama,-2,Arizona Shooting Memorial (2011)
+hearts,obama,2,Arizona Shooting Memorial (2011)
+lives,obama,-1,Arizona Shooting Memorial (2011)
+democracy,obama,2,Arizona Shooting Memorial (2011)
+loss,obama,-5,Arizona Shooting Memorial (2011)
+loved,obama,4,Arizona Shooting Memorial (2011)
+hope,obama,5,Arizona Shooting Memorial (2011)
+life,obama,5,Arizona Shooting Memorial (2011)
+love,obama,5,Arizona Shooting Memorial (2011)
+believed,obama,5,Arizona Shooting Memorial (2011)
+broken,obama,-3,Arizona Shooting Memorial (2011)
+civil,obama,1,Arizona Shooting Memorial (2011)
+expectations,obama,1,Arizona Shooting Memorial (2011)
+fallen,obama,-2,Arizona Shooting Memorial (2011)
+forces,obama,-1,Arizona Shooting Memorial (2011)
+passion,obama,3,Arizona Shooting Memorial (2011)
+violence,obama,-2,Arizona Shooting Memorial (2011)
+adequacy,obama,-1,Arizona Shooting Memorial (2011)
+aftermath,obama,-4,Arizona Shooting Memorial (2011)
+align,obama,1,Arizona Shooting Memorial (2011)
+appreciation,obama,2,Arizona Shooting Memorial (2011)
+assumptions,obama,1,Arizona Shooting Memorial (2011)
+beautiful,obama,4,Arizona Shooting Memorial (2011)
+blessed,obama,3,Arizona Shooting Memorial (2011)
+cares,obama,1,Arizona Shooting Memorial (2011)
+compassion,obama,2,Arizona Shooting Memorial (2011)
+conversation,obama,1,Arizona Shooting Memorial (2011)
+commit,obama,1,Arizona Shooting Memorial (2011)
+couragesouly,obama,5,Arizona Shooting Memorial (2011)
+cynacisim,obama,5,Arizona Shooting Memorial (2011)
+darkness,obama,-2,Arizona Shooting Memorial (2011)
+decency,obama,-1,Arizona Shooting Memorial (2011)
+defy,obama,-2,Arizona Shooting Memorial (2011)
+deserved,obama,1,Arizona Shooting Memorial (2011)
+divide,obama,-1,Arizona Shooting Memorial (2011)
+drifts,obama,-1,Arizona Shooting Memorial (2011)
+embodied,obama,3,Arizona Shooting Memorial (2011)
+empathy,obama,2,Arizona Shooting Memorial (2011)
+eternal,obama,1,Arizona Shooting Memorial (2011)
+fleeting,obama,-1,Arizona Shooting Memorial (2011)
+gunfire,obama,-3,Arizona Shooting Memorial (2011)
+gunman,obama,-5,Arizona Shooting Memorial (2011)
+heaven,obama,3,Arizona Shooting Memorial (2011)
+hero,obama,4,Arizona Shooting Memorial (2011)
+heart,obama,2,Arizona Shooting Memorial (2011)
+magic,obama,3,Arizona Shooting Memorial (2011)
+morality,obama,1,Arizona Shooting Memorial (2011)
+polarized,obama,-5,Arizona Shooting Memorial (2011)
+sooting,obama,-5,Arizona Shooting Memorial (2011)
+shattered,obama,-3,Arizona Shooting Memorial (2011)
+surviors,obama,3,Arizona Shooting Memorial (2011)
+tragedies,obama,-4,Arizona Shooting Memorial (2011)
+triggered,obama,-2,Arizona Shooting Memorial (2011)
+vitctims,obama,-5,Arizona Shooting Memorial (2011)
+Asad,obama,-5,Syria (2013)
+Chemical,obama,-3,Syria (2013)
+Weapon,obama,-5,Syria (2013)
+regime,obama,-3,Syria (2013)
+pollution,obama,-4,Climate Change (2013)
+carbon,obama,-2,Climate Change (2013)
+reform,obama,-2,Immigration Reform (2013)
+data,obama,2,Government Reform (2013)
+private,obama,1,Government Reform (2013)
+immigration,obama,,Immigration Reform (2013)
+racial,obama,-5,Trayvon Martin (2013)
+terrible,obama,-3,Syria (2013)
+sector,obama,1,Government Reform (2013)
+energy,obama,2,Climate Change (2013)
+gas,obama,1,Syria (2013)
+strikes,obama,-3,Nation Defense University (2013)
+civilian,obama,1,Nation Defense University (2013)
+legally,obama,4,Immigration Reform (2013)
+freedom,obama,5,Bradenburg Gate (2013)
+gtmo,obama,-4,Nation Defense University (2013)
+immigrants,obama,,Immigration Reform (2013)
+attack,obama,-4,Syria (2013)
+terrorism,obama,-5,Nation Defense University (2013)
+won,obama,4,Bradenburg Gate (2013)
+delivering,obama,1,Government Reform (2013)
+friendly,obama,4,Government Reform (2013)
+officer,obama,3,Government Reform (2013)
+user,obama,1,Government Reform (2013)
+casualties,obama,-4,Nation Defense University (2013)
+experiences,obama,3,Trayvon Martin (2013)
+naïve,obama,-2,Trayvon Martin (2013)
+productive,obama,3,Trayvon Martin (2013)
+justice,obama,3,Bradenburg Gate (2013)
+dictator,obama,-4,Syria (2013)
+gassed,obama,-4,Syria (2013)
+standards,obama,1,Climate Change (2013)
+isil,obama,-5,State of the Union (2013)
+laws,obama,2,Trayvon Martin (2013)
+illegally,obama,-2,Immigration Reform (2013)
+outstanding,obama,3,Immigration Reform (2013)
+undocumented,obama,-2,Immigration Reform (2013)
+detainees,obama,-3,Nation Defense University (2013)
+context,obama,1,Trayvon Martin (2013)
+haven't,obama,-1,Trayvon Martin (2013)
+electricity,obama,2,Climate Change (2013)
+loans,obama,-2,Climate Change (2013)
+comprehensive,obama,2,Immigration Reform (2013)
+terrorists,obama,-5,Nation Defense University (2013)
+humanity,obama,2,Syria (2013)
+poison,obama,-2,Syria (2013)
+nuclear,obama,-2,Bradenburg Gate (2013)
+peoples,obama,2,Bradenburg Gate (2013)
+societies,obama,2,Bradenburg Gate (2013)
+save,obama,2,Government Reform (2013)
+cleaner,obama,2,Climate Change (2013)
+plants,obama,-2,Climate Change (2013)
+case,obama,1,Trayvon Martin (2013)
+enforcement,obama,-2,Trayvon Martin (2013)
+least,obama,1,Trayvon Martin (2013)
+local,obama,2,Trayvon Martin (2013)
+earn,obama,2,Immigration Reform (2013)
+asked,obama,1,Syria (2013)
+troops,obama,2,Syria (2013)
+attacks,obama,-2,Nation Defense University (2013)
+war,obama,-3,Nation Defense University (2013)
+military,obama,2,Nation Defense University (2013)
+we've,obama,2,Government Reform (2013)
+detention,obama,-2,Nation Defense University (2013)
+lethal,obama,-4,Nation Defense University (2013)
+city,obama,1,Bradenburg Gate (2013)
+weapons,obama,-5,Bradenburg Gate (2013)
+allegiance,obama,2,Immigration Reform (2013)
+industries,obama,1,Immigration Reform (2013)
+labor,obama,1,Immigration Reform (2013)
+federal,obama,2,Government Reform (2013)
+cabinet,obama,1,Government Reform (2013)
+currently,obama,1,Government Reform (2013)
+needed,obama,2,Government Reform (2013)
+taxpayers,obama,2,Government Reform (2013)
+weather,obama,1,Government Reform (2013)
+administratively,obama,2,Government Reform (2013)
+applications,obama,2,Government Reform (2013)
+efficiently,obama,2,Government Reform (2013)
+entrepreneurs,obama,3,Government Reform (2013)
+expertise,obama,2,Government Reform (2013)
+fellows,obama,1,Government Reform (2013)
+fema,obama,2,Government Reform (2013)
+focusing,obama,1,Government Reform (2013)
+huge,obama,2,Government Reform (2013)
+identified,obama,1,Government Reform (2013)
+management,obama,2,Government Reform (2013)
+pages,obama,1,Government Reform (2013)
+receipt,obama,2,Government Reform (2013)
+redesign,obama,1,Government Reform (2013)
+smartest,obama,3,Government Reform (2013)
+talented,obama,3,Government Reform (2013)
+teams,obama,2,Government Reform (2013)
+visit,obama,1,Government Reform (2013)
+web,obama,1,Government Reform (2013)
+climate,obama,1,Climate Change (2013)
+perfect,obama,3,Trayvon Martin (2013)
+altercations,obama,-3,Trayvon Martin (2013)
+bias,obama,-3,Trayvon Martin (2013)
+departments,obama,1,Trayvon Martin (2013)
+disproportionately,obama,-2,Trayvon Martin (2013)
+examine,obama,-2,Trayvon Martin (2013)
+interpret,obama,1,Trayvon Martin (2013)
+outcome,obama,1,Trayvon Martin (2013)
+potentially,obama,1,Trayvon Martin (2013)
+ruling,obama,-2,Trayvon Martin (2013)
+seems,obama,1,Trayvon Martin (2013)
+statistically,obama,2,Trayvon Martin (2013)
+vigils,obama,3,Trayvon Martin (2013)
+war,obama,-3,Syria (2013)
+strike,obama,-3,Syria (2013)
+killed,obama,-4,Syria (2013)
+opposition,obama,-2,Syria (2013)
+Trageted,obama,-3,Syria (2013)
+member,obama,2,Nation Defense University (2013)
+strategy,obama,2,Nation Defense University (2013)
+fuel,obama,1,Climate Change (2013)
+homes,obama,3,Climate Change (2013)
+industry,obama,2,Climate Change (2013)
+republican,obama,,Climate Change (2013)
+criminal,obama,-3,Trayvon Martin (2013)
+difficult,obama,-2,Trayvon Martin (2013)
+levels,obama,1,Trayvon Martin (2013)
+mean,obama,-2,Trayvon Martin (2013)
+situation,obama,-2,Trayvon Martin (2013)
+violence,obama,-4,Trayvon Martin (2013)
+drones,obama,-2,Nation Defense University (2013)
+earning,obama,1,Immigration Reform (2013)
+hire,obama,2,Immigration Reform (2013)
+secretary,obama,1,Immigration Reform (2013)
+straightforward,obama,1,Immigration Reform (2013)
+brick,obama,1,Immigration Reform (2013)
+classrooms,obama,3,Immigration Reform (2013)
+consensus,obama,2,Immigration Reform (2013)
+criminals,obama,-3,Immigration Reform (2013)
+details,obama,2,Immigration Reform (2013)
+effect,obama,1,Immigration Reform (2013)
+forget,obama,-1,Immigration Reform (2013)
+illegal,obama,-3,Immigration Reform (2013)
+intel,obama,2,Immigration Reform (2013)
+knowingly,obama,2,Immigration Reform (2013)
+pathway,obama,2,Immigration Reform (2013)
+shadow,obama,1,Immigration Reform (2013)
+someplace,obama,1,Immigration Reform (2013)
+southern,obama,1,Immigration Reform (2013)
+stayed,obama,2,Immigration Reform (2013)
+wonderful,obama,4,Immigration Reform (2013)
+world's,obama,2,Syria (2013)
+wrote,obama,1,Syria (2013)
+planet,obama,3,Climate Change (2013)
+we’ll,obama,2,Climate Change (2013)
+year,obama,2,State of the Union (2013)
+smarter,obama,3,Government Reform (2013)
+beginning,obama,2,Government Reform (2013)
+bringing,obama,2,Government Reform (2013)
+complicated,obama,-1,Government Reform (2013)
+consequence,obama,-1,Government Reform (2013)
+consolidate,obama,-1,Government Reform (2013)
+efficient,obama,2,Government Reform (2013)
+faster,obama,2,Government Reform (2013)
+fill,obama,1,Government Reform (2013)
+founded,obama,3,Government Reform (2013)
+innovative,obama,2,Government Reform (2013)
+mobile,obama,1,Government Reform (2013)
+online,obama,2,Government Reform (2013)
+phone,obama,2,Government Reform (2013)
+service,obama,3,Government Reform (2013)
+clean air act,obama,3,Climate Change (2013)
+cut carbon pollution,obama,4,Climate Change (2013)
+reduce carbon pollution,obama,4,Climate Change (2013)
+the asad regime,obama,-4,Syria (2013)
+heroes,obama,5,Selma
+america,obama,4,SOTU_15
+america,obama,4,Selma
+american,obama,4,SOTU_15
+americans,obama,4,SOTU_15
+jobs,obama,4,SOTU_15
+americans,obama,4,Selma
+american,obama,4,Selma
+democrats,obama,4,SOTU_15
+family,obama,4,SOTU_15
+kids,obama,4,SOTU_15
+united,obama,4,SOTU_15
+allies,obama,4,SOTU_15
+diplomacy,obama,4,SOTU_15
+leadership,obama,4,SOTU_15
+justice,obama,4,Selma
+democracy,obama,4,Selma
+freedom,obama,4,Selma
+veteran,obama,4,SOTU_15
+glorious,obama,4,Selma
+loved,obama,4,Selma
+patriotism,obama,4,Selma
+perfect,obama,4,Selma
+new,obama,3,SOTU_15
+will,obama,3,SOTU_15
+every,obama,3,SOTU_15
+country,obama,3,SOTU_15
+economy,obama,3,SOTU_15
+families,obama,3,SOTU_15
+selma,obama,3,Selma
+college,obama,3,SOTU_15
+workers,obama,3,SOTU_15
+protect,obama,3,SOTU_15
+strong,obama,3,SOTU_15
+country,obama,3,Selma
+childcare,obama,3,SOTU_15
+help,obama,3,SOTU_15
+laughter,obama,3,SOTU_15
+honor,obama,3,Selma
+marched,obama,3,Selma
+believe,obama,3,SOTU_15
+community,obama,3,SOTU_15
+free,obama,3,SOTU_15
+great,obama,3,SOTU_15
+health,obama,3,SOTU_15
+nation,obama,3,SOTU_15
+faith,obama,3,Selma
+nation,obama,3,Selma
+voting,obama,3,Selma
+best,obama,3,SOTU_15
+lead,obama,3,SOTU_15
+values,obama,3,SOTU_15
+president,obama,3,Selma
+infrastructure,obama,3,SOTU_15
+stronger,obama,3,SOTU_15
+student,obama,3,SOTU_15
+citizens,obama,3,Selma
+generation,obama,3,Selma
+god,obama,3,Selma
+opportunity,obama,3,Selma
+progress,obama,3,Selma
+protect,obama,3,Selma
+bipartisan,obama,3,SOTU_15
+child,obama,3,SOTU_15
+president,obama,3,SOTU_15
+veterans,obama,3,SOTU_15
+workforce,obama,3,SOTU_15
+children,obama,3,Selma
+leaders,obama,3,Selma
+strength,obama,3,Selma
+strong,obama,3,Selma
+good,obama,3,SOTU_15
+democratic,obama,3,SOTU_15
+bless,obama,3,Selma
+celebrate,obama,3,Selma
+gospel,obama,3,Selma
+laughter,obama,3,Selma
+protection,obama,3,Selma
+you,obama,2,SOTU_15
+years,obama,2,SOTU_15
+can,obama,2,SOTU_15
+world,obama,2,SOTU_15
+young,obama,2,Selma
+women,obama,2,Selma
+businesses,obama,2,SOTU_15
+working,obama,2,SOTU_15
+states,obama,2,SOTU_15
+make,obama,2,Selma
+everyone,obama,2,SOTU_15
+fair,obama,2,SOTU_15
+together,obama,2,SOTU_15
+young,obama,2,SOTU_15
+change,obama,2,Selma
+history,obama,2,Selma
+idea,obama,2,Selma
+john,obama,2,Selma
+lewis,obama,2,Selma
+right,obama,2,Selma
+work,obama,2,Selma
+agree,obama,2,SOTU_15
+class,obama,2,SOTU_15
+give,obama,2,SOTU_15
+rebekah,obama,2,SOTU_15
+share,obama,2,SOTU_15
+50,obama,2,Selma
+changed,obama,2,Selma
+now,obama,2,Selma
+ahead,obama,2,SOTU_15
+change,obama,2,SOTU_15
+i'm,obama,2,SOTU_15
+rate,obama,2,SOTU_15
+security,obama,2,SOTU_15
+surely,obama,2,SOTU_15
+instinct,obama,2,Selma
+led,obama,2,Selma
+new,obama,2,Selma
+care,obama,2,SOTU_15
+economics,obama,2,SOTU_15
+fastest,obama,2,SOTU_15
+folks,obama,2,SOTU_15
+military,obama,2,SOTU_15
+nations,obama,2,SOTU_15
+opportunities,obama,2,SOTU_15
+opportunity,obama,2,SOTU_15
+school,obama,2,SOTU_15
+trade,obama,2,SOTU_15
+worked,obama,2,SOTU_15
+believe,obama,2,Selma
+effort,obama,2,Selma
+free,obama,2,Selma
+march,obama,2,Selma
+movement,obama,2,Selma
+applause,obama,2,SOTU_15
+iran,obama,2,SOTU_15
+national,obama,2,SOTU_15
+scientists,obama,2,SOTU_15
+story,obama,2,SOTU_15
+tight,obama,2,SOTU_15
+future,obama,2,Selma
+life,obama,2,Selma
+lives,obama,2,Selma
+nation's,obama,2,Selma
+singing,obama,2,Selma
+truths,obama,2,Selma
+won,obama,2,Selma
+workers,obama,2,Selma
+better,obama,2,SOTU_15
+rights,obama,2,Selma
+generation,obama,2,SOTU_15
+congress,obama,2,Selma
+experiment,obama,2,Selma
+citizenship,obama,2,Selma
+generations,obama,2,Selma
+immigrants,obama,2,Selma
+moral,obama,2,Selma
+promise,obama,2,Selma
+sacrifice,obama,2,Selma
+union,obama,2,Selma
+we,obama,1,SOTU_15
+our,obama,1,SOTU_15
+we,obama,1,Selma
+our,obama,1,Selma
+more,obama,1,SOTU_15
+with,obama,1,SOTU_15
+who,obama,1,Selma
+us,obama,1,SOTU_15
+do,obama,1,SOTU_15
+people,obama,1,Selma
+congress,obama,1,SOTU_15
+use,obama,1,SOTU_15
+have,obama,1,Selma
+many,obama,1,Selma
+instead,obama,1,SOTU_15
+just,obama,1,SOTU_15
+should,obama,1,SOTU_15
+since,obama,1,SOTU_15
+thing,obama,1,SOTU_15
+bridge,obama,1,Selma
+do,obama,1,Selma
+like,obama,1,Selma
+through,obama,1,Selma
+up,obama,1,Selma
+would,obama,1,Selma
+about,obama,1,SOTU_15
+set,obama,1,SOTU_15
+his,obama,1,Selma
+i,obama,1,Selma
+own,obama,1,Selma
+some,obama,1,Selma
+today,obama,1,Selma
+act,obama,1,SOTU_15
+each,obama,1,SOTU_15
+had,obama,1,SOTU_15
+own,obama,1,SOTU_15
+things,obama,1,SOTU_15
+law,obama,1,Selma
+office,obama,1,Selma
+self,obama,1,Selma
+believed,obama,1,SOTU_15
+continue,obama,1,SOTU_15
+government,obama,1,SOTU_15
+plan,obama,1,SOTU_15
+thank,obama,1,SOTU_15
+act,obama,1,Selma
+came,obama,1,Selma
+government,obama,1,Selma
+building,obama,1,SOTU_15
+earned,obama,1,SOTU_15
+knit,obama,1,SOTU_15
+networks,obama,1,SOTU_15
+record,obama,1,SOTU_15
+understand,obama,1,SOTU_15
+elected,obama,1,Selma
+gay,obama,1,Selma
+members,obama,1,Selma
+signed,obama,1,Selma
+speak,obama,1,Selma
+century,obama,1,SOTU_15
+making,obama,1,SOTU_15
+civil,obama,1,Selma
+political,obama,1,Selma
+not,obama,-1,Selma
+they,obama,-1,Selma
+their,obama,-1,SOTU_15
+no,obama,-1,Selma
+doesn't,obama,-1,SOTU_15
+leave,obama,-1,SOTU_15
+only,obama,-1,SOTU_15
+were,obama,-1,SOTU_15
+same,obama,-1,Selma
+them,obama,-1,Selma
+yet,obama,-1,Selma
+go,obama,-1,SOTU_15
+let,obama,-1,SOTU_15
+rules,obama,-1,SOTU_15
+old,obama,-1,Selma
+off,obama,-1,SOTU_15
+issue,obama,-1,SOTU_15
+issues,obama,-1,SOTU_15
+passed,obama,-1,Selma
+system,obama,-1,Selma
+risk,obama,-1,Selma
+paid,obama,-2,SOTU_15
+down,obama,-2,SOTU_15
+pay,obama,-2,SOTU_15
+politics,obama,-2,SOTU_15
+need,obama,-2,Selma
+effort,obama,-2,SOTU_15
+last,obama,-2,SOTU_15
+small,obama,-2,SOTU_15
+power,obama,-2,Selma
+before,obama,-2,SOTU_15
+can't,obama,-2,SOTU_15
+paying,obama,-2,SOTU_15
+climate,obama,-2,SOTU_15
+cuba,obama,-2,SOTU_15
+might,obama,-2,Selma
+tear,obama,-2,Selma
+weary,obama,-2,Selma
+afghanistan,obama,-2,SOTU_15
+deficits,obama,-2,SOTU_15
+clash,obama,-2,Selma
+fight,obama,-2,Selma
+aggression,obama,-2,SOTU_15
+power,obama,-3,SOTU_15
+republicans,obama,-3,SOTU_15
+sick,obama,-3,SOTU_15
+against,obama,-3,SOTU_15
+crisis,obama,-3,SOTU_15
+nuclear,obama,-3,SOTU_15
+blood,obama,-3,Selma
+sanctions,obama,-3,SOTU_15
+racial,obama,-3,Selma
+rob,obama,-3,Selma
+fears,obama,-3,SOTU_15
+debt,obama,-3,Selma
+combat,obama,-4,SOTU_15
+war,obama,-4,Selma
+fear,obama,-4,Selma
+violence,obama,-4,Selma
+terrorists,obama,-5,SOTU_15
+tyranny,obama,-5,Selma
