@@ -39,8 +39,18 @@ Zprime<-paragraph_words%>%
 View(Zprime)
 
 A<-get_sentiments("afinn")
+B<-get_sentiments("nrc")
+C<-get_sentiments("bing")
+D<-get_sentiments("loughran")
+
 
 Afinn<-inner_join(farewell_words, A)
+
+pressy%>%
+  group_by(word)%>%
+  summarize(mean(score))
+
+
 prezz<-inner_join(farewell_words, pressy)
 
 prezz_final<-prezz%>%
@@ -51,4 +61,22 @@ Afinn_final<-Afinn%>%
   group_by(reference)%>%
   summarize(sum(value), sd(value), mean(value))
 
+#code that makes the joins work
+View(prezz_final)
+View(Afinn_final)
+colnames(Afinn_final)[3]<-"sd(score)"
+colnames(Afinn_final)[4]<-"mean(score)"
+Afinn_final<-mutate(Afinn_final, type="Afinn")
+prezz_final<-mutate(prezz_final, type="Pressy")
+
+
+comp<-bind_rows(Afinn_final, prezz_final)
+ggplot(comp, aes(reference, 'mean(score)', color=type))+geom_jitter()
+
+#this makes the result sheet
+hulk<-left_join(Afinn_final, prezz_final, by="reference")
+View(hulk)
+
+comparative<-data.frame(balance=hulk$`mean(score).x`-hulk$`mean(score).y`, var=hulk$`sd(score).x`-hulk$`mean(score).y`)
+View(comparative)
 
